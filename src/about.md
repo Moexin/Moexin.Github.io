@@ -12,4 +12,4 @@ author: Moexin
 
 ## Contact
 
-Telegram：[AlanDecode](https://t.me/TCatMoexin)
+Telegram：[Moexin](https://t.me/TCatMoexin)
