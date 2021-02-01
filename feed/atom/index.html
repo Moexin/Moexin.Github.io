@@ -1,84 +1,235 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/</id><title>Moexin's Blog</title><updated>2021-02-01T07:41:09.040878+08:06</updated><author><name>Moexin</name><email>i@dqb.pw</email></author><link href="/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><subtitle>心若浮沉💗浅笑安然</subtitle><entry><id>/archives/typography/</id><title>Hello World!</title><updated>2021-02-01T07:41:09.040935+00:00</updated><author><name>AlanDecode</name><email>i@dqb.pw</email><uri>https://dqb.pw</uri></author><content>&lt;div class="notice"&gt;这是一篇示例文章，在这里你可以看到常用页面元素的显示效果，同时也是 Markdown 语法的参考文章。保留或者删除本文，开始自己的创作吧！&lt;/div&gt;&lt;h2&gt;L2 Heading&lt;/h2&gt;
-&lt;h3&gt;L3 Heading&lt;/h3&gt;
-&lt;h4&gt;L4 Heading&lt;/h4&gt;
-&lt;h5&gt;L5 Heading&lt;/h5&gt;
-&lt;h6&gt;L6 Heading&lt;/h6&gt;
-&lt;h2&gt;Paragraph&lt;/h2&gt;
-&lt;p&gt;We are creating a world that all may enter without privilege or prejudice accorded by race, economic power, military force, or station of birth.&lt;/p&gt;&lt;p&gt;We are creating a world where anyone, anywhere may express his or her beliefs, no matter how singular, without fear of being coerced into silence or conformity.&lt;/p&gt;&lt;h2&gt;Inline elements&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Bold&lt;/strong&gt;, &lt;ruby&gt;Ruby&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ルビ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;, &lt;em&gt;Italic&lt;/em&gt;, &lt;del&gt;Strikethrough&lt;/del&gt;, &lt;a href="https://www.imalan.cn"&gt;Link&lt;/a&gt;&lt;sup class="footnote-ref" id="fnref-1"&gt;&lt;a href="#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;&lt;h2&gt;Blockquote and nested blockquote&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;安得广厦千万间，大庇天下寒士俱欢颜！风雨不动安如山。&lt;/p&gt;&lt;blockquote&gt;
-&lt;p&gt;呜呼！何时眼前突兀见此屋，吾庐独破受冻死亦足！&lt;/p&gt;&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;Code&lt;/h2&gt;
-&lt;p&gt;Inline code: &lt;code&gt;int a=1;&lt;/code&gt;. Code block:&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;argc&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt; &lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-    &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Hello World!&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;List&lt;/h2&gt;
-&lt;h3&gt;Unordered List&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/</id><title>Moexin's Blog</title><updated>2021-02-01T08:28:08.601248+08:06</updated><author><name>Moexin</name><email>i@dqb.pw</email></author><link href="/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><subtitle>心若浮沉💗浅笑安然</subtitle><entry><id>/archives/V2Board%20build%20tutorial/</id><title>V2Board 搭建教程</title><updated>2021-02-01T08:28:08.601767+00:00</updated><author><name>Moexin</name><email>i@dqb.pw</email><uri>https://dqb.pw</uri></author><content>&lt;h2&gt;环境要求&lt;/h2&gt;
+&lt;p&gt;这里我们推荐使用aaPanel作为环境搭建的入门首选，机器的内存最好是1G，512M是最低要求配置（Swap最小要求1G）。&lt;/p&gt;&lt;p&gt;本文教程是将 &lt;strong&gt;aaPanel&lt;/strong&gt; 作为环境进行配置。&lt;/p&gt;&lt;h2&gt;部署&lt;/h2&gt;
+&lt;h3&gt;1.配置aaPanel&lt;/h3&gt;
+&lt;p&gt;你需要在 &lt;a href="https://www.aapanel.com"&gt;aaPanel&lt;/a&gt; 选择你的系统获得安装方式。这里以 Debian 9作为系统环境进行安装。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt install curl -y &amp;amp;&amp;amp; wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;amp;&amp;amp; bash install.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装完成后我们登陆 aaPanel 进行环境的安装。&lt;/p&gt;&lt;p&gt;选择使用LNMP的环境安装方式勾选如下信息。&lt;/p&gt;&lt;h4&gt;最低要求：&lt;/h4&gt;
+&lt;p&gt;☑️ Nginx 1.17&lt;br /&gt;
+☑️ MySQL 5.6&lt;br /&gt;
+☑️ PHP 7.3&lt;br /&gt;
+☑️ Redis 5.0&lt;/p&gt;&lt;h4&gt;个人推荐：&lt;/h4&gt;
+&lt;p&gt;☑️ Nginx Tengine&lt;br /&gt;
+☑️ MySQL AliSQL&lt;br /&gt;
+☑️ PHP 7.3&lt;br /&gt;
+☑️ Redis 5.0&lt;/p&gt;&lt;p&gt;以上环境版本号请选择 Compiled 进行编译安装。&lt;/p&gt;&lt;h3&gt;2.安装PHP组件&lt;/h3&gt;
+&lt;p&gt;aaPanel 面板 &amp;gt; App Store &amp;gt; 找到PHP 7.3点击Setting &amp;gt; Install extentions
+安装以下组件：&lt;/p&gt;&lt;p&gt;☑️ fileinfo&lt;br /&gt;
+☑️ opcache&lt;br /&gt;
+☑️ redis&lt;br /&gt;
+☑️ imagemagick&lt;br /&gt;
+☑️ imap&lt;br /&gt;
+☑️ exif&lt;br /&gt;
+☑️ intl&lt;/p&gt;&lt;h3&gt;3.解除被禁止的函数&lt;/h3&gt;
+&lt;p&gt;aaPanel 面板 &amp;gt; App Store &amp;gt; 找到PHP 7.3点击Setting &amp;gt; Disabled functions 将 &lt;code&gt;putenv&lt;/code&gt; &lt;code&gt;proc_open&lt;/code&gt; &lt;code&gt;pcntl_alarm&lt;/code&gt; &lt;code&gt;pcntl_signal&lt;/code&gt;从列表中删除。&lt;/p&gt;&lt;h3&gt;4.添加站点&lt;/h3&gt;
+&lt;p&gt;aaPanel 面板 &amp;gt; Website &amp;gt; Add site。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Domain：填入你指向服务器的域名
+Database：MySQL utf8mb4
+PHP version：PHP-73
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Submit 完成创建。&lt;/p&gt;&lt;p&gt;完成创建后访问站点目录删除目录下除&lt;code&gt;.htaccess&lt;/code&gt;和&lt;code&gt;.user.ini&lt;/code&gt;以外的所有文件。&lt;/p&gt;&lt;h3&gt;5.安装V2Board&lt;/h3&gt;
+&lt;p&gt;通过SSH登录到服务器后访问站点路径如：/www/wwwroot/domain.com。&lt;/p&gt;&lt;p&gt;以下命令都需要在站点目录进行执行。&lt;/p&gt;&lt;p&gt;执行命令从 Github 克隆到当前目录。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 默认拉取 V2Board master 分支
+git clone -b master https://github.com/v2board/v2board.git tmp &amp;amp;&amp;amp; mv tmp/.git . &amp;amp;&amp;amp; rm -rf tmp &amp;amp;&amp;amp; git reset --hard
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;执行命令更新 composer 程序。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;composer self-update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;执行命令进行包安装。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;composer install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装过程中报错或者无法继续安装的请分配 Swap，如何分配 Swap 请查阅[post]4[/post]&lt;/p&gt;&lt;p&gt;复制.env.example文件为.env。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# domain.com 请更改为站点域名且路径必须存在
+cp .env.example .env
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;打开 .env 文件，修改数据库信息并保存。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DB_HOST=数据库地址
+DB_PORT=3306
+DB_DATABASE=数据库名
+DB_USERNAME=数据库用户名
+DB_PASSWORD=数据库密码
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;每次修改 &lt;code&gt;.env&lt;/code&gt; 文件后需要执行以下命令重建缓存&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;php artisan config:cache
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;保存后请重新给予目录权限&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# domain.com 请更改为站点域名且路径必须存在
+chown -R www:www *
+chmod -R 755 *
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;执行命令进行面板的安装。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;php artisan v2board:install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输入管理员账号密码。&lt;/p&gt;&lt;h3&gt;6.配置站点&lt;/h3&gt;
+&lt;p&gt;编辑添加的站点 &amp;gt; Site directory &amp;gt; Running directory 选择 /public 保存，并且取消勾选Anti-XSS attack (Base directory limit)(open_basedir)。&lt;/p&gt;&lt;p&gt;编辑添加的站点 &amp;gt; URL rewrite 填入伪静态信息。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;location /downloads {
+}
+
+location / {
+    try_files $uri $uri/ /index.php$is_args$query_string;
+}
+
+location ~ .*\.(js|css)?$
+{
+    expires 1h;
+    error_log off;
+    access_log /dev/null;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;禁止访问网站目录下以.开头的文件（可选,会造成证书签发失败，请签发完毕再添加至 URL rewrite 与以上代码共存。）&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;location ~ /\.
+{
+    deny all;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;至此一切就绪，可以访问你的面板了。&lt;/p&gt;&lt;h3&gt;7.配置定时任务&lt;/h3&gt;
+&lt;p&gt;aaPanel 面板 &amp;gt; Cron。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# domain.com 请更改为站点域名且路径必须存在
+Type of Task：Shell Script
+Name of Task：Task Scheduling
+Period：N Minutes 1 Minute
+Script content：/usr/bin/php /www/wwwroot/domain.com/artisan schedule:run
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;根据上述信息添加每1分钟执行一次的定时任务。&lt;/p&gt;&lt;h3&gt;7.启动队列服务&lt;/h3&gt;
+&lt;p&gt;队列服务将会应用在邮件发送等场景，请务必保证队列服务在后台运行正常。&lt;/p&gt;&lt;p&gt;你可以使用 nohup 让其在后台运行，但是 nohup 无法保证队列服务不会退出。 使用 nohup 方式你需要在站点目录下执行如下命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nohup php artisan queue:work --queue=send_email,send_telegram &amp;gt; queue.log 2&amp;gt;&amp;amp;1 &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果你想让队列服务长期保持稳定的在后台运作，你需要使用 Systemd 的 Buff 加持。&lt;/p&gt;&lt;h4&gt;添加 Systemd 配置文件&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;#以下代码块请更改为站点域名且路径必须存在domain.com并全部一次性复制粘贴回车
+cat &amp;lt;&amp;lt; EOF &amp;gt;&amp;gt; /etc/systemd/system/queue.service
+[Unit]
+Description=Queue Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+PIDFile=/run/queue.pid
+ExecStart=/usr/bin/php /www/wwwroot/domain.com/artisan queue:work --queue=send_email,send_telegram
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+EOF
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;启动由 Systemd 守护的队列服务&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;#重载 Systemd 配置
+systemctl daemon-reload
+#设置由 Systemd 守护的队列服务开机自启动
+systemctl enable queue.service
+#启动由 Systemd 守护的队列服务
+systemctl start queue.service
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;至此一切就绪，可以直接投入生产使用了。&lt;/p&gt;&lt;h2&gt;前后分离部署教程&lt;/h2&gt;
+&lt;p&gt;前后分离后用户访问的是前端页面，后端仅提供api供前端使用。&lt;br /&gt;
+将前端html文件托管部署到空间或者服务器，亦或者OSS等支持html的存储服务。&lt;br /&gt;
+前端分为用户端和管理端：&lt;br /&gt;
+用户端文件更新仓库为：&lt;a href="https://github.com/v2board/v2board-user/releases"&gt;https://github.com/v2board/v2board-user/releases&lt;/a&gt;&lt;br /&gt;
+管理端文件更新仓库为：&lt;a href="https://github.com/v2board/v2board-admin/releases"&gt;https://github.com/v2board/v2board-admin/releases&lt;/a&gt;&lt;br /&gt;
+配置并将 env.example.js 重命名为 env.js 后即完成部署。访问前端域名即可访问。&lt;/p&gt;&lt;h3&gt;特别注意&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;env.js&lt;/code&gt; 文件下的 &lt;code&gt;host: '',&lt;/code&gt; 应为你分离后的根域名的二级域名，并且解析到与你授权域名相同的记录值。例如你的授权域名的记录值为 &lt;code&gt;1.1.1.1&lt;/code&gt; 你在分离后的根域名 &lt;code&gt;233.com&lt;/code&gt; 下添加一条二级域名解析为 &lt;code&gt;api.233.com&lt;/code&gt;记录值填写与你授权域名相同的记录值 &lt;code&gt;1.1.1.1&lt;/code&gt; 然后分离后的根域名解析记录值填写你将前端html文件托管部署到空间或者服务器的CNAME记录值或IP地址，&lt;code&gt;env.js&lt;/code&gt; 文件下的 &lt;code&gt;host: '',&lt;/code&gt;则填写为 &lt;code&gt;host: 'https://api.233.com',&lt;/code&gt;(如果你没有SSL证书请将 &lt;code&gt;https&lt;/code&gt; 改为 &lt;code&gt;http&lt;/code&gt;)。至此你就可以访问分离后的根域名 &lt;code&gt;233.com&lt;/code&gt; 来登录用户端了。管理端同理。&lt;/p&gt;</content><link href="/archives/V2Board%20build%20tutorial/" rel="alternate"/><published>2020-01-10T20:34:00+08:06</published></entry><entry><id>/archives/Debian/Ubuntu/CentOS%20automatic%20network%20reinstallation%20one-click%20script/</id><title>Debian/Ubuntu/CentOS 全自动网络重装一键脚本</title><updated>2021-02-01T08:28:08.601678+00:00</updated><author><name>Moexin</name><email>i@dqb.pw</email><uri>https://dqb.pw</uri></author><content>&lt;blockquote&gt;
+&lt;p&gt;本一键脚本在萌咖大佬的脚本基础上开发，实现了懒人式一键网络重装 Debian / Ubuntu / CentOS 系统及DD方式安装系统。解决了云服务商提供模板镜像体积过大、预装软件过多、不够纯净等问题。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h1&gt;使用方法&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;bash &amp;lt;(wget --no-check-certificate -qO- https://cdn.jsdelivr.net/gh/hiCasper/Shell@master/AutoReinstall.sh)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1&gt;支持重装的系统&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;iPhone&lt;ul&gt;
-&lt;li&gt;iPhone X&lt;/li&gt;
-&lt;li&gt;iPhone 11&lt;/li&gt;
+&lt;li&gt;Ubuntu 18.04/16.04&lt;/li&gt;
+&lt;li&gt;Debian 9/10&lt;/li&gt;
+&lt;li&gt;CentOS 6&lt;/li&gt;
+&lt;li&gt;CentOS 7 （DD方式）&lt;/li&gt;
+&lt;li&gt;自定义DD镜像&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;iPad&lt;/li&gt;
-&lt;li&gt;MacBook&lt;/li&gt;
+&lt;h1&gt;特性 / 优化&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;自动获取IP地址、网关、子网掩码&lt;/li&gt;
+&lt;li&gt;自动判断网络环境，选择国内/外镜像，解决速度慢的问题&lt;/li&gt;
+&lt;li&gt;懒人一键化，无需复杂的命令&lt;/li&gt;
+&lt;li&gt;解决萌咖脚本中一些导致安装错误的问题&lt;/li&gt;
+&lt;li&gt;CentOS 7 镜像抛弃LVM，回归ext4，减少不稳定因素&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Ordered List&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;打开冰箱&lt;ol&gt;
-&lt;li&gt;右手放在冰箱门拉手上&lt;/li&gt;
-&lt;li&gt;左手扶住冰箱主体&lt;/li&gt;
-&lt;li&gt;右手向后用力&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;把大象放进冰箱&lt;/li&gt;
-&lt;li&gt;关上冰箱&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;Horizontal rule&lt;/h2&gt;
-&lt;hr /&gt;
-&lt;h2&gt;Math&lt;/h2&gt;
-&lt;p&gt;Inline Math: $m\times n$, math block:&lt;/p&gt;&lt;p&gt;$$C_{m\times k}=A_{m\times n}\cdot B_{n\times k}$$&lt;/p&gt;
-&lt;h2&gt;Figures&lt;/h2&gt;
-&lt;h3&gt;Single figure&lt;/h3&gt;
-&lt;figure  size-undefined&gt;&lt;img loading="lazy" width="-1" height="-1" src="./images/Mononoke_Hime.jpg" /&gt;&lt;figcaption&gt;Princess Mononoke&lt;/figcaption&gt;&lt;/figure&gt;&lt;h3&gt;Photoset&lt;/h3&gt;
-&lt;div class="photos"&gt;
-&lt;figure  size-undefined&gt;&lt;img loading="lazy" width="-1" height="-1" src="./images/IMG_0073.jpeg" /&gt;&lt;/figure&gt;
-&lt;figure  size-undefined&gt;&lt;img loading="lazy" width="-1" height="-1" src="./images/1463017562.jpg" /&gt;&lt;/figure&gt;
-&lt;figure  size-undefined&gt;&lt;img loading="lazy" width="-1" height="-1" src="./images/IMG_0053.jpeg" /&gt;&lt;/figure&gt;
-&lt;/div&gt;&lt;div class="photos"&gt;
-&lt;figure  size-undefined&gt;&lt;img loading="lazy" width="-1" height="-1" src="./images/IMG_0039.jpeg" /&gt;&lt;/figure&gt;
-&lt;figure  size-undefined&gt;&lt;img loading="lazy" width="-1" height="-1" src="./images/IMG_00510.jpeg" /&gt;&lt;/figure&gt;
-&lt;figure  size-undefined&gt;&lt;img loading="lazy" width="-1" height="-1" src="./images/IMG_0005.jpeg" /&gt;&lt;/figure&gt;
-&lt;/div&gt;&lt;h2&gt;Table&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-  &lt;th&gt;header&lt;/th&gt;
-  &lt;th&gt;header&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-  &lt;td&gt;cell 1&lt;/td&gt;
-  &lt;td&gt;cell 2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-  &lt;td&gt;cell 3&lt;/td&gt;
-  &lt;td&gt;cell 4&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2&gt;Link Card&lt;/h2&gt;
-&lt;div class="links"&gt;
-&lt;a style="display:block" target="_blank" href="https://www.imalan.cn" class="board-item"&gt;             &lt;div class="board-thumb"&gt;&lt;img src="https://secure.gravatar.com/avatar/1741a6eef5c824899e347e4afcbaa75d?s=200&amp;r=G&amp;d="&gt;&lt;/div&gt;             &lt;div class="board-title"&gt;AlanDecode&lt;/div&gt;&lt;/a&gt;
-&lt;/div&gt;&lt;section class="footnotes"&gt;
-&lt;ol&gt;
-&lt;li id="fn-1"&gt;&lt;p&gt;Home page for AlanDecode&lt;a href="#fnref-1" class="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/section&gt;
-</content><link href="/archives/typography/" rel="alternate"/><published>2019-12-18T16:50:00+08:06</published></entry></feed>
+&lt;h1&gt;注意&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;重装后系统密码均在脚本中有提供，&lt;strong&gt;安装后请尽快修改密码&lt;/strong&gt;，Linux系统建议启用密钥登陆。&lt;/li&gt;
+&lt;li&gt;OpenVZ / LXC 架构系统不适用&lt;/li&gt;
+&lt;/ul&gt;
+</content><link href="/archives/Debian/Ubuntu/CentOS%20automatic%20network%20reinstallation%20one-click%20script/" rel="alternate"/><published>2020-02-10T20:34:00+08:06</published></entry><entry><id>/archives/Linux%20VPS%20one-click%20add/remove%20Swap%20virtual%20memory%20script/</id><title>Linux VPS 一键添加/删除 Swap 虚拟内存脚本</title><updated>2021-02-01T08:28:08.601574+00:00</updated><author><name>Moexin</name><email>i@dqb.pw</email><uri>https://dqb.pw</uri></author><content>&lt;blockquote&gt;
+&lt;p&gt;很多人的VPS服务器由于内存太小，会导致很多进程被杀掉，这时候就需要我们添加&lt;code&gt;Swap&lt;/code&gt;虚拟内存了，这里就整了个一键脚本方便懒人或小白使用。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2&gt;使用方法&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 脚本不支持&lt;code&gt;OpenVZ&lt;/code&gt;架构，安装会自动退出。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bash &amp;lt;(wget --no-check-certificate -qO- https://cdn.jsdelivr.net/gh/Moexin/Shell@master/Swap.sh)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后根据选项进行操作，记得添加&lt;code&gt;Swap&lt;/code&gt;的时候填写纯数字，默认单位为M。&lt;/p&gt;&lt;figure style="flex: 194.0" &gt;&lt;img loading="lazy" width="388" height="100" src="https://cdn.jsdelivr.net/gh/MoexinCDN/Picture@master/20191217151814.png" /&gt;&lt;figcaption&gt;运行截图&lt;/figcaption&gt;&lt;/figure&gt;</content><link href="/archives/Linux%20VPS%20one-click%20add/remove%20Swap%20virtual%20memory%20script/" rel="alternate"/><published>2020-03-10T20:34:00+08:06</published></entry><entry><id>/archives/Linux%20VPS%20server%20SSH%20port%20one-click%20modification%20script/</id><title>Linux VPS 服务器 SSH 端口一键修改脚本</title><updated>2021-02-01T08:28:08.601525+00:00</updated><author><name>Moexin</name><email>i@dqb.pw</email><uri>https://dqb.pw</uri></author><content>&lt;blockquote&gt;
+&lt;p&gt;我们的很多&lt;code&gt;VPS&lt;/code&gt;服务器，默认的端口都是&lt;code&gt;22&lt;/code&gt;，所以一直会被人扫描爆破，很容易会出现问题，所以我们需要通过修改端口来尽可能减少这种事情发生，但对于很多小白或者很懒的人来说，更喜欢一键脚本就能完成的方法，于是我就整了个&lt;code&gt;SSH&lt;/code&gt;端口一键修改脚本。从&lt;code&gt;OneinStack&lt;/code&gt;一键安装包上扒下来的。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2&gt;使用方法&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;系统要求：&lt;/strong&gt;支持&lt;code&gt;Debian&lt;/code&gt;、&lt;code&gt;Ubuntu&lt;/code&gt;、&lt;code&gt;CentOS&lt;/code&gt;系统。&lt;/p&gt;&lt;p&gt;运行以下命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bash &amp;lt;(wget --no-check-certificate -qO- https://cdn.jsdelivr.net/gh/Moexin/Shell@master/SSH-Port.sh)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输入端口确认。再打开防火墙端口：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#如果防火墙使用的iptables（Centos 6），修改端口为8080
+iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
+service iptables save
+service iptables restart
+#如果使用的是firewall（CentOS 7）
+firewall-cmd --zone=public --add-port=8080/tcp --permanent 
+firewall-cmd --reload
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最后重启&lt;code&gt;SSH&lt;/code&gt;生效：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#CentOS系统
+service sshd restart
+#Debian/Ubuntu系统
+service ssh restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后就可以使用新端口SSH登录了。&lt;/p&gt;</content><link href="/archives/Linux%20VPS%20server%20SSH%20port%20one-click%20modification%20script/" rel="alternate"/><published>2020-04-10T20:34:00+08:06</published></entry><entry><id>/archives/Linux%20automatic%20hard%20disk%20mounting%20one-click%20script/</id><title>Linux 自动硬盘挂载一键脚本</title><updated>2021-02-01T08:28:08.601475+00:00</updated><author><name>Moexin</name><email>i@dqb.pw</email><uri>https://dqb.pw</uri></author><content>&lt;blockquote&gt;
+&lt;p&gt;在购买服务器时 ，磁盘经常只有固定的5-10G，当你购买额外的空间、或是原本有空间需要挂载时，繁琐的程序会让很多萌新崩溃，而且也不一定能成功挂载~一不小心还把数据丢了。这里推荐一个BT上的一键硬盘挂载脚本~ 支持Centos、Ubuntu、Debian、Fedora。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2&gt;说明：&lt;/h2&gt;
+&lt;p&gt;1：本工具默认将数据盘挂载到&lt;code&gt;/www&lt;/code&gt;目录&lt;br /&gt;
+2：如有&lt;code&gt;NTFS/FAT32&lt;/code&gt;分区可选格式化自动挂载&lt;br /&gt;
+3：若您的硬盘已分区，且未挂载，工具会自动将分区挂载到&lt;code&gt;/www&lt;/code&gt;&lt;br /&gt;
+4：若您的硬盘是新硬盘，工具会自动分区并格式化成&lt;code&gt;xfs/ext4&lt;/code&gt;文件系统&lt;br /&gt;
+5：本工具只自动挂载一个分区，若您有多块数据盘，请手动挂载未被自动挂载的硬盘&lt;br /&gt;
+6：此脚本只适用于新硬盘挂载，若数据盘已有数据请勿使用此脚本&lt;/p&gt;&lt;h2&gt;使用：&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;bash &amp;lt;(wget --no-check-certificate -qO- https://download.bt.cn/tools/auto_disk.sh)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如需挂载其他目录在挂载命令后加上挂载目录即可 务必以&lt;code&gt;/&lt;/code&gt;为开头&lt;br /&gt;
+以下挂到&lt;code&gt;/website&lt;/code&gt;目录为例&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bash &amp;lt;(wget --no-check-certificate -qO- https://download.bt.cn/tools/auto_disk.sh) /website
+&lt;/code&gt;&lt;/pre&gt;
+</content><link href="/archives/Linux%20automatic%20hard%20disk%20mounting%20one-click%20script/" rel="alternate"/><published>2020-05-10T20:34:00+08:06</published></entry><entry><id>/archives/Linux%20software%20source%20one-click%20replacement%20script/</id><title>Linux 软件源一键更换脚本</title><updated>2021-02-01T08:28:08.601420+00:00</updated><author><name>Moexin</name><email>i@dqb.pw</email><uri>https://dqb.pw</uri></author><content>&lt;blockquote&gt;
+&lt;p&gt;有时候会遇到&lt;code&gt;Linux&lt;/code&gt;的源更新速度非常的缓慢，特别是在国内使用默认的源，因为国内的网络环境，经常会出现无法更新，更新缓慢的情况。在这种情况下，更换一个更适合或者说更近，更快的软件源，会为你的&lt;code&gt;Linux&lt;/code&gt;安装更新操作更加的流畅和顺利。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;本脚本适合&lt;code&gt;CentOS 5、6、7&lt;/code&gt;，&lt;code&gt;Ubuntu 14.04、16.04、18.04&lt;/code&gt;，&lt;code&gt;Debian 7、8、9&lt;/code&gt;，一键匹配换源。&lt;/p&gt;&lt;p&gt;手动更换源也非常的简单，只需要按几步即可完成，这个脚本只是把这简单的几步用一键完成，为你更换更快的软件源。虽然比较简单，但对管理多台&lt;code&gt;Linux&lt;/code&gt;服务器的人，或是经常重装系统的人来说能方便不少。&lt;/p&gt;&lt;p&gt;废话不多说，脚本纯净，除了修改软件源文件，不会另外添加其他任何文件或配置，也不会修改其他无关的设置，无残留，代码不加密，这也是我的脚本的原则，功能代码只有一百来行，请自查。&lt;/p&gt;&lt;h2&gt;用法&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;bash &amp;lt;(wget --no-check-certificate -qO- https://cdn.jsdelivr.net/gh/Moexin/Shell@master/Mirror.sh)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;对于 Debian 默认换源为&lt;code&gt;Fastly CDN&lt;/code&gt;的&lt;code&gt;Mirror&lt;/code&gt;这个源有&lt;code&gt;Fastly&lt;/code&gt;的加持对境外主机都有不错的速度。 对于&lt;code&gt;Ubuntu&lt;/code&gt;和&lt;code&gt;CentOS&lt;/code&gt;系统都默认换为&lt;code&gt;阿里云&lt;/code&gt;的&lt;code&gt;Mirror&lt;/code&gt;这个源有&lt;code&gt;阿里云全球CDN&lt;/code&gt;的加持，全球都有不错的速度。&lt;/p&gt;&lt;p&gt;对于&lt;code&gt;Debian&lt;/code&gt;系统还设置了四套其他的源，&lt;code&gt;阿里云&lt;/code&gt;，&lt;code&gt;CloudFront CDN&lt;/code&gt;，&lt;code&gt;网易163&lt;/code&gt;，&lt;code&gt;中科大的源&lt;/code&gt;，请根据需要使用参数一键设置如&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bash &amp;lt;(wget --no-check-certificate -qO- https://cdn.jsdelivr.net/gh/Moexin/Shell@master/Mirror.sh) cn
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;bash &amp;lt;(wget --no-check-certificate -qO- https://cdn.jsdelivr.net/gh/Moexin/Shell@master/Mirror.sh) 163
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;bash &amp;lt;(wget --no-check-certificate -qO- https://cdn.jsdelivr.net/gh/Moexin/Shell@master/Mirror.sh) aliyun
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;bash &amp;lt;(wget --no-check-certificate -qO- https://cdn.jsdelivr.net/gh/Moexin/Shell@master/Mirror.sh) aws
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果对配置的文件不满意，还可以一键还原&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bash &amp;lt;(wget --no-check-certificate -qO- https://cdn.jsdelivr.net/gh/Moexin/Shell@master/Mirror.sh) restore
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;源码查看:
+&lt;a href="https://raw.githubusercontent.com/Moexin/Shell/master/Mirror.sh"&gt;&lt;a href="https://raw.githubusercontent.com/Moexin/Shell/master/Mirror.sh"&gt;https://raw.githubusercontent.com/Moexin/Shell/master/Mirror.sh&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;</content><link href="/archives/Linux%20software%20source%20one-click%20replacement%20script/" rel="alternate"/><published>2020-06-10T20:34:00+08:06</published></entry><entry><id>/archives/Linux%20one-click%20installation%20of%20common/latest%20kernel%20scripts%20Rui%20Su/BBR/BBR%20magic%20revision/BBRPlus/BBR2/</id><title>Linux 一键安装常见/最新内核脚本 锐速/BBR/BBR魔改版/BBRPlus/BBR2</title><updated>2021-02-01T08:28:08.601317+00:00</updated><author><name>Moexin</name><email>i@dqb.pw</email><uri>https://dqb.pw</uri></author><content>&lt;blockquote&gt;
+&lt;p&gt;对于出口带宽，我们常常采用&lt;code&gt;BBR&lt;/code&gt;，&lt;code&gt;锐速&lt;/code&gt;等&lt;code&gt;TCP&lt;/code&gt;加速软件来争夺带宽提高自己的速度。但是原版的&lt;code&gt;BBR&lt;/code&gt;并没有太多侵略性，在这个人人都用&lt;code&gt;TCP&lt;/code&gt;加速的大环境下，&lt;code&gt;BBR&lt;/code&gt;的加速功效就略显不足了。于是大佬们专门改进了下这个&lt;code&gt;BBR&lt;/code&gt;，使&lt;code&gt;BBR&lt;/code&gt;具有了侵略性。最近我也连续购买了几个服务器，每次都手动搭建，感觉到十分麻烦，干脆给大家推荐一个脚本吧。该脚本支持的加速软件非常多，支持&lt;code&gt;锐速&lt;/code&gt;、&lt;code&gt;BBR&lt;/code&gt;、&lt;code&gt;BBR魔改版&lt;/code&gt;、&lt;code&gt;BBRPlus&lt;/code&gt;、&lt;code&gt;BBR2&lt;/code&gt;等。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2&gt;用法&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;wget --no-check-certificate -q https://cdn.jsdelivr.net/gh/ylx2016/Linux-NetSpeed@master/tcp.sh &amp;amp;&amp;amp; chmod +x tcp.sh &amp;amp;&amp;amp; ./tcp.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;此脚本会安装您所选择的内核并卸载其他原内核，具有一定风险性，安装中会出现提示&lt;code&gt;Abort kernel removal?&lt;/code&gt;选择&lt;code&gt;No&lt;/code&gt;即可。如果不想卸载原内核，请使用以下不卸载内核版本。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wget --no-check-certificate -q https://cdn.jsdelivr.net/gh/ylx2016/Linux-NetSpeed@master/tcpx.sh &amp;amp;&amp;amp; chmod +x tcpx.sh &amp;amp;&amp;amp; ./tcpx.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后根据提示按需操作即可。&lt;/p&gt;&lt;figure style="flex: 39.83050847457627" &gt;&lt;img loading="lazy" width="376" height="472" src="https://cdn.jsdelivr.net/gh/MoexinCDN/Picture@master/20200823232951.png" /&gt;&lt;figcaption&gt;脚本截图&lt;/figcaption&gt;&lt;/figure&gt;</content><link href="/archives/Linux%20one-click%20installation%20of%20common/latest%20kernel%20scripts%20Rui%20Su/BBR/BBR%20magic%20revision/BBRPlus/BBR2/" rel="alternate"/><published>2020-07-10T20:34:00+08:06</published></entry></feed>

@@ -12,8 +12,50 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-    <loc>/archives/typography/</loc>
-    <lastmod>2019-12-18</lastmod>
+    <loc>/archives/Linux%20one-click%20installation%20of%20common/latest%20kernel%20scripts%20Rui%20Su/BBR/BBR%20magic%20revision/BBRPlus/BBR2/</loc>
+    <lastmod>2020-07-10</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/Linux%20software%20source%20one-click%20replacement%20script/</loc>
+    <lastmod>2020-06-10</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/Linux%20automatic%20hard%20disk%20mounting%20one-click%20script/</loc>
+    <lastmod>2020-05-10</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/Linux%20VPS%20server%20SSH%20port%20one-click%20modification%20script/</loc>
+    <lastmod>2020-04-10</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/Linux%20VPS%20one-click%20add/remove%20Swap%20virtual%20memory%20script/</loc>
+    <lastmod>2020-03-10</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/Debian/Ubuntu/CentOS%20automatic%20network%20reinstallation%20one-click%20script/</loc>
+    <lastmod>2020-02-10</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/V2Board%20build%20tutorial/</loc>
+    <lastmod>2020-01-10</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>

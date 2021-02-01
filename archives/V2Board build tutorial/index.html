@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Moexin,Blog,Moexin's Blog,萌新" />
+    <meta name="generator" content="Maverick 1.1" />
+    <meta name="template" content="Galileo" />
+    <link rel="alternate" type="application/rss+xml" title="Moexin's Blog &raquo; RSS 2.0" href="/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Moexin's Blog &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/assets/galileo-8d8763e752.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/assets/katex.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700&display=swap">
+    <script>
+        var ExSearchConfig = {
+            root: "",
+            api: "https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/4b49afd8a7d2775e8286b4ccbe00cfdd.json"
+        }
+    </script>
+    
+<title>V2Board 搭建教程 - Moexin's Blog</title>
+<meta name="author" content="Moexin" />
+<meta name="description" content="记一次基于 Laravel 开发的程序 V2Board 部署安装的详细过程。" />
+<meta property="og:title" content="V2Board 搭建教程 - Moexin's Blog" />
+<meta property="og:description" content="记一次基于 Laravel 开发的程序 V2Board 部署安装的详细过程。" />
+<meta property="og:site_name" content="Moexin's Blog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/archives/V2Board%20build%20tutorial/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2020-01-10T20:34:00-00.00" />
+<meta name="twitter:title" content="V2Board 搭建教程 - Moexin's Blog" />
+<meta name="twitter:description" content="记一次基于 Laravel 开发的程序 V2Board 部署安装的详细过程。" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="" />
+
+
+    
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon.ico">
+<link rel="icon" sizes="16x16 32x32 64x64" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="196x196" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-192.png">
+<link rel="icon" type="image/png" sizes="160x160" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-160.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-96.png">
+<link rel="icon" type="image/png" sizes="64x64" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-64.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-16.png">
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-180.png">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-144.png">
+<meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/browserconfig.xml">
+
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            <header id="ga-header">
+                <div first>
+                    <aside id="ga-brand">
+                        <h1 class="brand"><a class="no-style" href="/">Moexin's Blog</a></h1>
+                        <p>心若浮沉💗浅笑安然</p>
+                    </aside>
+                </div>
+                <div second id="ga-nav">
+                    <nav class="navs">
+                        <ul><li><a class="ga-highlight" href="/" target="_self">首页</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/archives/" target="_self">归档</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/about/" target="_self">关于</a></li><span class="separator">·</span><li><a href="#" target="_self" class="search-form-input ga-highlight">搜索</a></li></ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="wrapper">
+                
+<main>    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">V2Board 搭建教程</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>Moexin</span>
+                <time>
+                    2020-01-10
+                </time>
+                
+                in <a no-style class="category" href="/category/%E6%95%99%E7%A8%8B/">
+                    教程
+                </a>
+                
+                
+                <span class="leancloud_visitors" 
+                    id="/archives/V2Board%20build%20tutorial/" 
+                    data-flag-title="V2Board 搭建教程"> · <i class="leancloud-visitors-count"></i> Views</span>
+                
+            </span>
+            <div class="ga-content_body">
+                <h2>环境要求</h2>
+<p>这里我们推荐使用aaPanel作为环境搭建的入门首选，机器的内存最好是1G，512M是最低要求配置（Swap最小要求1G）。</p><p>本文教程是将 <strong>aaPanel</strong> 作为环境进行配置。</p><h2>部署</h2>
+<h3>1.配置aaPanel</h3>
+<p>你需要在 <a href="https://www.aapanel.com">aaPanel</a> 选择你的系统获得安装方式。这里以 Debian 9作为系统环境进行安装。</p>
+<pre><code>apt install curl -y &amp;&amp; wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;&amp; bash install.sh
+</code></pre>
+<p>安装完成后我们登陆 aaPanel 进行环境的安装。</p><p>选择使用LNMP的环境安装方式勾选如下信息。</p><h4>最低要求：</h4>
+<p>☑️ Nginx 1.17<br />
+☑️ MySQL 5.6<br />
+☑️ PHP 7.3<br />
+☑️ Redis 5.0</p><h4>个人推荐：</h4>
+<p>☑️ Nginx Tengine<br />
+☑️ MySQL AliSQL<br />
+☑️ PHP 7.3<br />
+☑️ Redis 5.0</p><p>以上环境版本号请选择 Compiled 进行编译安装。</p><h3>2.安装PHP组件</h3>
+<p>aaPanel 面板 &gt; App Store &gt; 找到PHP 7.3点击Setting &gt; Install extentions
+安装以下组件：</p><p>☑️ fileinfo<br />
+☑️ opcache<br />
+☑️ redis<br />
+☑️ imagemagick<br />
+☑️ imap<br />
+☑️ exif<br />
+☑️ intl</p><h3>3.解除被禁止的函数</h3>
+<p>aaPanel 面板 &gt; App Store &gt; 找到PHP 7.3点击Setting &gt; Disabled functions 将 <code>putenv</code> <code>proc_open</code> <code>pcntl_alarm</code> <code>pcntl_signal</code>从列表中删除。</p><h3>4.添加站点</h3>
+<p>aaPanel 面板 &gt; Website &gt; Add site。</p>
+<pre><code>Domain：填入你指向服务器的域名
+Database：MySQL utf8mb4
+PHP version：PHP-73
+</code></pre>
+<p>Submit 完成创建。</p><p>完成创建后访问站点目录删除目录下除<code>.htaccess</code>和<code>.user.ini</code>以外的所有文件。</p><h3>5.安装V2Board</h3>
+<p>通过SSH登录到服务器后访问站点路径如：/www/wwwroot/domain.com。</p><p>以下命令都需要在站点目录进行执行。</p><p>执行命令从 Github 克隆到当前目录。</p>
+<pre><code># 默认拉取 V2Board master 分支
+git clone -b master https://github.com/v2board/v2board.git tmp &amp;&amp; mv tmp/.git . &amp;&amp; rm -rf tmp &amp;&amp; git reset --hard
+</code></pre>
+<p>执行命令更新 composer 程序。</p>
+<pre><code>composer self-update
+</code></pre>
+<p>执行命令进行包安装。</p>
+<pre><code>composer install
+</code></pre>
+<p>安装过程中报错或者无法继续安装的请分配 Swap，如何分配 Swap 请查阅[post]4[/post]</p><p>复制.env.example文件为.env。</p>
+<pre><code># domain.com 请更改为站点域名且路径必须存在
+cp .env.example .env
+</code></pre>
+<p>打开 .env 文件，修改数据库信息并保存。</p>
+<pre><code>DB_HOST=数据库地址
+DB_PORT=3306
+DB_DATABASE=数据库名
+DB_USERNAME=数据库用户名
+DB_PASSWORD=数据库密码
+</code></pre>
+<p>每次修改 <code>.env</code> 文件后需要执行以下命令重建缓存</p>
+<pre><code>php artisan config:cache
+</code></pre>
+<p>保存后请重新给予目录权限</p>
+<pre><code># domain.com 请更改为站点域名且路径必须存在
+chown -R www:www *
+chmod -R 755 *
+</code></pre>
+<p>执行命令进行面板的安装。</p>
+<pre><code>php artisan v2board:install
+</code></pre>
+<p>输入管理员账号密码。</p><h3>6.配置站点</h3>
+<p>编辑添加的站点 &gt; Site directory &gt; Running directory 选择 /public 保存，并且取消勾选Anti-XSS attack (Base directory limit)(open_basedir)。</p><p>编辑添加的站点 &gt; URL rewrite 填入伪静态信息。</p>
+<pre><code>location /downloads {
+}
+
+location / {
+    try_files $uri $uri/ /index.php$is_args$query_string;
+}
+
+location ~ .*\.(js|css)?$
+{
+    expires 1h;
+    error_log off;
+    access_log /dev/null;
+}
+</code></pre>
+<h4>禁止访问网站目录下以.开头的文件（可选,会造成证书签发失败，请签发完毕再添加至 URL rewrite 与以上代码共存。）</h4>
+
+<pre><code>location ~ /\.
+{
+    deny all;
+}
+</code></pre>
+<p>至此一切就绪，可以访问你的面板了。</p><h3>7.配置定时任务</h3>
+<p>aaPanel 面板 &gt; Cron。</p>
+<pre><code># domain.com 请更改为站点域名且路径必须存在
+Type of Task：Shell Script
+Name of Task：Task Scheduling
+Period：N Minutes 1 Minute
+Script content：/usr/bin/php /www/wwwroot/domain.com/artisan schedule:run
+</code></pre>
+<p>根据上述信息添加每1分钟执行一次的定时任务。</p><h3>7.启动队列服务</h3>
+<p>队列服务将会应用在邮件发送等场景，请务必保证队列服务在后台运行正常。</p><p>你可以使用 nohup 让其在后台运行，但是 nohup 无法保证队列服务不会退出。 使用 nohup 方式你需要在站点目录下执行如下命令：</p>
+<pre><code>nohup php artisan queue:work --queue=send_email,send_telegram &gt; queue.log 2&gt;&amp;1 &amp;
+</code></pre>
+<p>如果你想让队列服务长期保持稳定的在后台运作，你需要使用 Systemd 的 Buff 加持。</p><h4>添加 Systemd 配置文件</h4>
+
+<pre><code>#以下代码块请更改为站点域名且路径必须存在domain.com并全部一次性复制粘贴回车
+cat &lt;&lt; EOF &gt;&gt; /etc/systemd/system/queue.service
+[Unit]
+Description=Queue Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+PIDFile=/run/queue.pid
+ExecStart=/usr/bin/php /www/wwwroot/domain.com/artisan queue:work --queue=send_email,send_telegram
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+EOF
+</code></pre>
+<h4>启动由 Systemd 守护的队列服务</h4>
+
+<pre><code>#重载 Systemd 配置
+systemctl daemon-reload
+#设置由 Systemd 守护的队列服务开机自启动
+systemctl enable queue.service
+#启动由 Systemd 守护的队列服务
+systemctl start queue.service
+</code></pre>
+<p>至此一切就绪，可以直接投入生产使用了。</p><h2>前后分离部署教程</h2>
+<p>前后分离后用户访问的是前端页面，后端仅提供api供前端使用。<br />
+将前端html文件托管部署到空间或者服务器，亦或者OSS等支持html的存储服务。<br />
+前端分为用户端和管理端：<br />
+用户端文件更新仓库为：<a href="https://github.com/v2board/v2board-user/releases">https://github.com/v2board/v2board-user/releases</a><br />
+管理端文件更新仓库为：<a href="https://github.com/v2board/v2board-admin/releases">https://github.com/v2board/v2board-admin/releases</a><br />
+配置并将 env.example.js 重命名为 env.js 后即完成部署。访问前端域名即可访问。</p><h3>特别注意</h3>
+<p><code>env.js</code> 文件下的 <code>host: '',</code> 应为你分离后的根域名的二级域名，并且解析到与你授权域名相同的记录值。例如你的授权域名的记录值为 <code>1.1.1.1</code> 你在分离后的根域名 <code>233.com</code> 下添加一条二级域名解析为 <code>api.233.com</code>记录值填写与你授权域名相同的记录值 <code>1.1.1.1</code> 然后分离后的根域名解析记录值填写你将前端html文件托管部署到空间或者服务器的CNAME记录值或IP地址，<code>env.js</code> 文件下的 <code>host: '',</code>则填写为 <code>host: 'https://api.233.com',</code>(如果你没有SSL证书请将 <code>https</code> 改为 <code>http</code>)。至此你就可以访问分离后的根域名 <code>233.com</code> 来登录用户端了。管理端同理。</p>
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/V2Board/">#V2Board</a>
+    </span>
+    
+</div>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <a class="ga-highlight" href="/archives/Debian/Ubuntu/CentOS%20automatic%20network%20reinstallation%20one-click%20script/">Debian/Ubuntu/CentOS 全自动网络重装一键脚本</a>
+        <p class="yue">本一键脚本在萌咖大佬的脚本基础上开发，实现了懒人式一键网络重装 Debian / Ubuntu / CentOS 系统及DD方式安装系统。解决了云服务商提供模板镜像体积过大、预装软件过多、不够纯净等问题。</p>
+    </div>
+
+
+    <div class="prev">
+        <h3>没有了</h3>
+        <p class="yue">这是最旧的文章</p>
+    </div>
+
+</section>
+
+
+    
+        <script>
+            var initValine = function () {
+                new Valine({"enable": true, "el": "#vcomments", "appId": "AWXSLU0r8WkSTtSRhS9QKy0F-gzGzoHsz", "appKey": "vKfe5G9sioi4aMcpqtxXmixq", "visitor": true, "recordIP": true});
+            }
+        </script>
+        <script defer src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js' onload="initValine()"></script>
+        <div id="vcomments"></div>
+    
+
+</main>
+
+                <footer class="ga-mono" id="ga-footer">
+                    <section>
+                        <span id="ga-uptime"></span>
+                        <span class="brand">Moexin's Blog</span>
+                    </section>
+                    <section>
+                        <p class="copyright">
+                            <span>Copyright © 2021 Moexin</span>
+                            <span>Powered by <a no-style href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick & Galileo</a></span>
+                        </p>
+                        <div class="copyright">
+                            <span class="footer-addon">
+                                
+                            </span>
+                            <nav class="social-links">
+                                <ul><li><a class="no-style" title="GitHub" href="https://github.com/Moexin" target="_blank"><i class="gi gi-github"></i>GitHub</a></li></ul>
+                            </nav>
+                        </div>
+                    </section>
+                    <script>
+                        var site_build_date = "2016-01-22T16:51+08:00"
+                    </script>
+                    <script src="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/assets/galileo-7c8cea54ab.js"></script>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!--katex-->
+    <script defer src="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/assets/katex.min.js"></script>
+    <script>
+    mathOpts = {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+        ]
+    };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/assets/ExSearch/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
+
+    
+    </body>
+</html>
