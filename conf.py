@@ -20,7 +20,6 @@ enable_jsdelivr = {
 
 # 站点设置
 site_name = "Moexin's Blog"
-site_logo = "${static_prefix}Moexin.jpg"
 site_build_date = "2016-01-22T16:51+08:00"
 author = "Moexin"
 email = "i@dqb.pw"
@@ -78,26 +77,26 @@ valine = {
 head_addon = r'''
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
-<link rel="shortcut icon" href="${site_prefix}Favicon/favicon.ico">
-<link rel="icon" sizes="16x16 32x32 64x64" href="${site_prefix}Favicon/favicon.ico">
-<link rel="icon" type="image/png" sizes="196x196" href="${site_prefix}Favicon/favicon-192.png">
-<link rel="icon" type="image/png" sizes="160x160" href="${site_prefix}Favicon/favicon-160.png">
-<link rel="icon" type="image/png" sizes="96x96" href="${site_prefix}Favicon/favicon-96.png">
-<link rel="icon" type="image/png" sizes="64x64" href="${site_prefix}Favicon/favicon-64.png">
-<link rel="icon" type="image/png" sizes="32x32" href="${site_prefix}Favicon/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="${site_prefix}Favicon/favicon-16.png">
-<link rel="apple-touch-icon" href="${site_prefix}Favicon/favicon-57.png">
-<link rel="apple-touch-icon" sizes="114x114" href="${site_prefix}Favicon/favicon-114.png">
-<link rel="apple-touch-icon" sizes="72x72" href="${site_prefix}Favicon/favicon-72.png">
-<link rel="apple-touch-icon" sizes="144x144" href="${site_prefix}Favicon/favicon-144.png">
-<link rel="apple-touch-icon" sizes="60x60" href="${site_prefix}Favicon/favicon-60.png">
-<link rel="apple-touch-icon" sizes="120x120" href="${site_prefix}Favicon/favicon-120.png">
-<link rel="apple-touch-icon" sizes="76x76" href="${site_prefix}Favicon/favicon-76.png">
-<link rel="apple-touch-icon" sizes="152x152" href="${site_prefix}Favicon/favicon-152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="${site_prefix}Favicon/favicon-180.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon.ico">
+<link rel="icon" sizes="16x16 32x32 64x64" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="196x196" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-192.png">
+<link rel="icon" type="image/png" sizes="160x160" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-160.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-96.png">
+<link rel="icon" type="image/png" sizes="64x64" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-64.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-16.png">
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-180.png">
 <meta name="msapplication-TileColor" content="#FFFFFF">
-<meta name="msapplication-TileImage" content="${site_prefix}Favicon/favicon-144.png">
-<meta name="msapplication-config" content="${site_prefix}Favicon/browserconfig.xml">
+<meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/favicon-144.png">
+<meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/Moexin/Moexin.Github.io@gh-pages/favicon/browserconfig.xml">
 '''
 
 footer_addon = ''
