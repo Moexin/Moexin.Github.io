@@ -23,7 +23,7 @@ site_name = "Moexin's Blog"
 site_build_date = "2016-01-22T16:51+08:00"
 author = "Moexin"
 email = "i@dqb.pw"
-author_homepage = "https://dqb.pw"
+author_homepage = "https://moex.in"
 description = "心若浮沉💗浅笑安然"
 key_words = ['Moexin', 'Blog', "Moexin's Blog", '萌新']
 language = 'zh-CN'
@@ -35,8 +35,8 @@ external_links = [
     },
     {
         "name": "Moexin's NetDisk",
-        "url": "https://pan.dqb.pw",
-        "brief": "基于OneDrive的个人网盘"
+        "url": "https://pan.moex.in",
+        "brief": "基于OneManager的个人网盘"
     }
 ]
 nav = [
