@@ -30,7 +30,7 @@ language = 'zh-CN'
 external_links = [
     {
         "name": "TCat云服务",
-        "url": "https://tcat.pw",
+        "url": "https://tcat.cc",
         "brief": "可能是最走心的云服务商"
     },
     {
