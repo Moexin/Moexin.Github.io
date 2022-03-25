@@ -22,7 +22,7 @@ enable_jsdelivr = {
 site_name = "Moexin's Blog"
 site_build_date = "2016-01-22T16:51+08:00"
 author = "Moexin"
-email = "i@dqb.pw"
+email = "i@moex.in"
 author_homepage = "https://moex.in"
 description = "心若浮沉💗浅笑安然"
 key_words = ['Moexin', 'Blog', "Moexin's Blog", '萌新']
@@ -35,8 +35,8 @@ external_links = [
     },
     {
         "name": "Moexin's NetDisk",
-        "url": "https://pan.moex.in",
-        "brief": "基于OneManager的个人网盘"
+        "url": "https://dqb.pw",
+        "brief": "基于Alist的个人网盘"
     }
 ]
 nav = [
