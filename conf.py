@@ -29,14 +29,14 @@ key_words = ['Moexin', 'Blog', "Moexin's Blog", '萌新']
 language = 'zh-CN'
 external_links = [
     {
-        "name": "TCat云服务",
-        "url": "https://tcat.cc",
-        "brief": "可能是最走心的云服务商"
+        "name": "MoeSer",
+        "url": "https://ser.moex.in",
+        "brief": "基于 Unraid 的个人服务器"
     },
     {
         "name": "Moexin's NetDisk",
-        "url": "https://dqb.pw",
-        "brief": "基于Alist的个人网盘"
+        "url": "https://pan.moex.in",
+        "brief": "基于 Alist 的个人网盘"
     }
 ]
 nav = [
